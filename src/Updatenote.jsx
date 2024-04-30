@@ -41,13 +41,13 @@ function UpdateNote({id,title,content,setumode}) {
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
           Title:
         </label>
-                <input type="text" name="title" value={formdata.title} placeholder="Title" required onChange={handleChange} />
+                <input type="text" name="title" value={formdata.title} className="w-1/2 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Title" required onChange={handleChange} />
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
           Content:
         </label>
-                <input type="text" name="content" value={formdata.content} placeholder="Content" required onChange={handleChange} />
-                <button type="submit" className="px-3 mt-2 font-bold text-pink-200 bg-pink-600 hover:bg-purple-600 hover:text-white">{!loading?"Update":"..."}</button>
-                <button onClick={()=>setumode(false)} className="px-3 mt-2 font-bold text-pink-200 bg-pink-600 hover:bg-purple-600 hover:text-white">Cancel</button>
+                <input type="text" name="content" value={formdata.content} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  placeholder="Content" required onChange={handleChange} />
+                <button type="submit" className="bg-red-600 hover:bg-black hover:text-white px-3 mt-20 font-bold w-32 text-2xl h-10 text-pink-100 rounded-lg">{!loading?"Update":"..."}</button>
+                <button onClick={()=>setumode(false)} className="px-3 mt-10 font-bold text-pink-200 bg-pink-600 hover:bg-purple-600 hover:text-white">Discard Changes</button>
             </div>
             </form>
         </div>

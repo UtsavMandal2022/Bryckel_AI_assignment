@@ -36,24 +36,24 @@ function AddNote(){
             hist('/notes');
       };
     return (
-        <div>
+        <div className="bg-slate-200 h-screen">
             <Link to="/notes">
-        <button className="bg-pink-600  mt-6 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
+        <button className="bg-pink-600 ml-4 mt-6 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
             Go Back
             </button>
         </Link>
             <form onSubmit={submitForm}>
                 <div className="flex flex-col items-center justify-center">
-            <h1 className="text-blue-500 text-4xl mb-5 text-bold ">Add a Note</h1>
+              <h1 className="text-blue-500 text-4xl mb-5 text-bold italic animate-bounce">Add a Note</h1>
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
           Title:
         </label>
-                <input type="text" name="title" placeholder="Title" required onChange={handleChange} />
+                <input type="text" name="title" placeholder="Title" className="w-1/2 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required onChange={handleChange} />
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
           Content:
         </label>
-                <input type="text" name="content" placeholder="Content" required onChange={handleChange} />
-                <button type="submit" className="px-3 mt-2 font-bold text-pink-200 bg-pink-600 hover:bg-purple-600 hover:text-white">{!loading?"Add":"..."}</button>
+                <input type="textarea" name="content" placeholder="Content" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required onChange={handleChange} />
+                <button type="submit" className=" px-3 mt-20 font-bold w-32 text-2xl h-10 text-pink-100 rounded-lg bg-pink-600 hover:bg-red-600 hover:text-white">{!loading?"Add":"..."}</button>
             </div>
             </form>
         </div>
